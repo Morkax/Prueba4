@@ -21,7 +21,8 @@ def lista_productos(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else: 
             return Response(serializer.erros, status=status.HTTP_400_BAD_REQUEST)
-
+#se agrego el put y el delete
+        
 @api_view(['GET', 'PUT', 'DELETE'])
 def detalle_producto(request, id):
     """ Get, Update, o delete de un producto en particular"""
